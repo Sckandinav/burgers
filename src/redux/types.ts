@@ -14,3 +14,22 @@ export interface BurgerSliceState {
   isLoading: boolean;
   isError: boolean;
 }
+
+export type categories = {
+  category: string[];
+};
+
+export type sortItem = {
+  label: string;
+  value: string;
+};
+export type sortProp = {
+  sortBy: string;
+  orderBy: string;
+};
+
+export interface SortSliceState {
+  categories: string;
+  sortBy: string;
+  orderBy: string;
+}
