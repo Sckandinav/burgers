@@ -7,6 +7,7 @@ import sortSelector from './redux/selectors/sort';
 
 import Categories from './Components/Categories/Categories';
 import Sort from './Components/Sort/Sort';
+import Burgers from './Components/Burgers/Burgers';
 
 import './App.css';
 
@@ -25,18 +26,17 @@ function App() {
         <Categories />
         <Sort />
       </div>
-      {isLoading && 'Loading'}
-      {isError && 'Server Error'}
-      {burgers && (
-        <ul>
-          {burgers.map(el => (
-            <div key={el.id}>
-              <h3>{el.name}</h3>
-              <p>{el.price}</p>
-            </div>
-          ))}
-        </ul>
-      )}
+      <div className="container">
+        {isLoading && 'Loading'}
+        {isError && 'Server Error'}
+        {burgers && (
+          <ul className="burgers">
+            {burgers.map(burger => (
+              <Burgers key={burger.id} {...burger} />
+            ))}
+          </ul>
+        )}
+      </div>
     </div>
   );
 }
