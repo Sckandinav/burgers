@@ -4,9 +4,24 @@
   padding: 0 15px;
 }
 
+.sortProperty {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  padding-top: 20px;
+}
+
 .burgers {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
   justify-content: flex-start;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 30px;
+  align-items: start;
 }

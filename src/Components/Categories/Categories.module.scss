@@ -1,0 +1,15 @@
+.categories {
+  display: flex;
+  gap: 24px;
+}
+
+.category {
+  padding: 9px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color, 0.2s ease-in-out;
+
+  &:hover {
+    background-color: var(--chrome-yellow);
+  }
+}

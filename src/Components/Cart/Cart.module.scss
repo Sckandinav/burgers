@@ -1,0 +1,105 @@
+.cart {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  background-color: var(--white);
+  border-radius: 20px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 15px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--black);
+  margin-bottom: 5px;
+  font-weight: 800;
+}
+
+.img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 10px;
+
+}
+
+.info {
+  flex: 1;
+}
+
+.title {
+  font-size: 12px;
+}
+
+.count {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  background-color: var(--anti-flash-white);
+  border-radius: 12px;
+}
+
+.total {
+  padding-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--black);
+  margin-bottom: 20px;
+}
+
+.quantity,
+.minus,
+.plus {
+  padding: 5px 6px;
+
+}
+
+.minus {
+  border-right: 1px solid transparent;
+  transition: border-right 0.2s ease-in-out;
+
+  &:hover {
+    border-right: 1px solid var(--black);
+  }
+}
+
+.plus {
+  border-left: 1px solid transparent;
+  transition: border-left 0.2s ease-in-out;
+
+  &:hover {
+    border-left: 1px solid var(--black);
+  }
+}
+
+
+
+
+.buttons__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+  button {
+    border-radius: 15px;
+    padding: 10px 15px;
+    background-color: var(--chrome-yellow);
+    transition: background-color, 0.2s ease-in-out;
+
+    &:hover {
+      background-color: var(--orange-Red);
+
+    }
+  }
+}

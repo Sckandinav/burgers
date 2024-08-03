@@ -6,6 +6,8 @@ import { useAppDispatch, useAppSelector } from '../../redux/hooks';
 import { getCategory } from '../../redux/slices/categories';
 import { setCategory } from '../../redux/slices/sort';
 
+import styles from './Categories.module.scss';
+
 const Categories: React.FC = () => {
   const { burgers } = useAppSelector(burgersSelector);
   const dispatch = useAppDispatch();
@@ -16,9 +18,10 @@ const Categories: React.FC = () => {
   }, [burgers, dispatch]);
 
   return (
-    <ul>
+    <ul className={styles.categories}>
       {categories.map(category => (
         <li
+          className={styles.category}
           key={category}
           onClick={event => {
             if (event.currentTarget.textContent) {

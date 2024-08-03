@@ -33,3 +33,17 @@ export interface SortSliceState {
   sortBy: string;
   orderBy: string;
 }
+
+export type cartItem = {
+  id: number;
+  name: string;
+  image: string;
+  price: number;
+  count: number;
+};
+
+export interface CartSliceState {
+  items: cartItem[];
+  totalPrice: number;
+  totalCount: number;
+}
