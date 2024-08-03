@@ -1,0 +1,41 @@
+.header {
+  margin-bottom: 20px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../../../public/Ellipse\ 1.png');
+  background-color: var(--ghost-white);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+
+  .logo {
+    margin-bottom: 20px;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 60px;
+
+    h1 {
+      font-size: 50px;
+      font-weight: 800;
+      color: var(--orange-Red);
+      gap: 50px;
+
+      span {
+        display: block;
+        color: var(--ghost-white);
+      }
+    }
+
+    p {
+      color: var(--ghost-white);
+    }
+  }
+
+}

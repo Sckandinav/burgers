@@ -9,6 +9,8 @@ import Categories from './Components/Categories/Categories';
 import Sort from './Components/Sort/Sort';
 import Burgers from './Components/Burgers/Burgers';
 import Cart from './Components/Cart/Cart';
+import Header from './Components/Header/Header';
+import Footer from './Components/Footer/Footer';
 
 import './App.css';
 
@@ -22,8 +24,11 @@ function App() {
   }, [dispatch, params]);
 
   return (
-    <main>
-      <div>
+    <div>
+      <header>
+        <Header />
+      </header>
+      <main>
         <div className="container">
           <div className="sortProperty">
             <Categories />
@@ -44,8 +49,13 @@ function App() {
             )}
           </div>
         </div>
-      </div>
-    </main>
+      </main>
+      <footer>
+        <div className="container">
+          <Footer />
+        </div>
+      </footer>
+    </div>
   );
 }
 
