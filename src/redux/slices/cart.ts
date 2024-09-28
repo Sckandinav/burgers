@@ -6,6 +6,7 @@ const initialState: CartSliceState = {
   items: [],
   totalPrice: 0,
   totalCount: 0,
+  isOrdering: false,
 };
 
 const cartSlice = createSlice({
@@ -43,8 +44,11 @@ const cartSlice = createSlice({
       state.totalCount = 0;
       state.totalPrice = 0;
     },
+    orderPopup(state) {
+      state.isOrdering = !state.isOrdering;
+    },
   },
 });
 
-export const { addProduct, minusProduct, clearCart } = cartSlice.actions;
+export const { addProduct, minusProduct, clearCart, orderPopup } = cartSlice.actions;
 export default cartSlice.reducer;

@@ -1,4 +1,4 @@
 import { RootState } from '../store';
-const selectCart = (state: RootState) => state.cart;
+const selectorCart = (state: RootState) => state.cart;
 
-export default selectCart;
+export default selectorCart;

@@ -46,4 +46,5 @@ export interface CartSliceState {
   items: cartItem[];
   totalPrice: number;
   totalCount: number;
+  isOrdering: boolean;
 }

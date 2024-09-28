@@ -1,0 +1,90 @@
+.modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+
+  .inner {
+    padding: 20px;
+    border-radius: 23px;
+    background-color: var(--ghost-white);
+    width: max-content;
+    height: 400px;
+
+    h4 {
+      margin-bottom: 20px;
+    }
+
+
+  }
+
+
+  .input__group {
+    position: relative;
+    margin-bottom: 20px;
+
+    label {
+      position: absolute;
+      left: 10px;
+      top: 30%;
+      font-size: 14px;
+      color: #B1B1B1;
+      transition-duration: 0.2s;
+    }
+
+    input {
+      padding: 15px 10px 5px;
+      border: transparent;
+      outline: transparent;
+      background-color: var(--white);
+      color: var(--black);
+      font-size: 15px;
+      border-radius: 12px;
+
+      &:focus+label,
+      &:not(:placeholder-shown)+label {
+        top: 2px;
+        font-size: 10px;
+      }
+    }
+
+
+    & p {
+      display: none;
+    }
+  }
+
+  .address__details {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  button {
+    display: block;
+    margin: 0 auto;
+    background-color: var(--orange-Red);
+    color: var(--white);
+    font-size: 16px;
+    width: 50%;
+    padding: 10px 0;
+    border-radius: 12px;
+    transition:
+      background-color 0.2s ease-in-out,
+      color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: var(--chrome-yellow);
+      color: var(--black);
+    }
+  }
+
+
+}

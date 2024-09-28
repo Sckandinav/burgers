@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import styles from './Footer.module.scss';
 const Footer: React.FC = () => {
   return (
@@ -24,7 +26,7 @@ const Footer: React.FC = () => {
           <h5 className={styles.title}>Мы в соцсетях</h5>
           <ul className={styles.social}>
             <li>
-              <a href="/">
+              <Link to="/">
                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clipPath="url(#clip0_57_2464)">
                     <path
@@ -38,7 +40,7 @@ const Footer: React.FC = () => {
                     </clipPath>
                   </defs>
                 </svg>
-              </a>
+              </Link>
             </li>
             <li>
               <a href="/">

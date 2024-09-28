@@ -4,6 +4,7 @@
   padding: 24px 16px;
   background-color: var(--white);
   border-radius: 20px;
+  max-width: 265xp;
 }
 
 .item {
@@ -91,9 +92,10 @@
   align-items: center;
   margin-bottom: 20px;
 
-  button {
+  button,
+  .link {
     border-radius: 15px;
-    padding: 10px 15px;
+    padding: 6px 10px;
     background-color: var(--chrome-yellow);
     transition: background-color, 0.2s ease-in-out;
 
@@ -102,4 +104,12 @@
 
     }
   }
+
+  .link {
+    color: var(--black);
+    // padding: 0;
+    text-align: center;
+    text-decoration: none;
+  }
+
 }

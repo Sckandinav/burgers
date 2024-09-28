@@ -5,7 +5,7 @@ import { BurgerSliceState } from '../types';
 
 const initialState: BurgerSliceState = {
   burgers: [],
-  isLoading: false,
+  isLoading: true,
   isError: false,
 };
 

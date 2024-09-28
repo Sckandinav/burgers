@@ -1,14 +1,16 @@
 import React from 'react';
+
 import styles from './Cart.module.scss';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks';
 import selectCart from '../../redux/selectors/cart';
-import { addProduct, minusProduct, clearCart } from '../../redux/slices/cart';
+import { addProduct, minusProduct, clearCart, orderPopup } from '../../redux/slices/cart';
 
 const Cart: React.FC = () => {
   const dispatch = useAppDispatch();
   const { items, totalPrice, totalCount } = useAppSelector(selectCart);
   if (items) {
   }
+
   return (
     <div className={styles.cart}>
       <div className={styles.top}>
@@ -44,7 +46,7 @@ const Cart: React.FC = () => {
           </div>
           <div className={styles['buttons__list']}>
             <button onClick={() => dispatch(clearCart())}>Очистить</button>
-            <button>Оформить заказ</button>
+            <button onClick={() => dispatch(orderPopup())}>Оформить заказ</button>
           </div>
         </div>
       )}
@@ -53,15 +55,3 @@ const Cart: React.FC = () => {
 };
 
 export default Cart;
-
-{
-  /* <div>
-  <div className={styles.total}>
-    <p>Всего:</p> <span>{totalPrice}₽</span>
-  </div>
-  <div className={styles['buttons__list']}>
-    <button onClick={() => dispatch(clearCart())}>Очистить</button>
-    <button>Оформить заказ</button>
-  </div>
-</div>; */
-}
